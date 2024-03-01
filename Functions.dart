@@ -1,5 +1,12 @@
 
+void checkMaritalStatus (){
+  bool isMarried = true;
+  bool isSingle = false;
 
+  print("His he Married: $isMarried");
+   print("His he single:  $isSingle");
+
+}
 void printName() {
   print("My name is Joseph");
 }
@@ -30,6 +37,7 @@ void multiplication(int a, int b) {
 }
 // The main application
 void main (){
+  checkMaritalStatus();
   int number1 = 12;
   int number2 = 40;
 
@@ -46,6 +54,7 @@ void main (){
   String kim = InstructorName();
   print("The name of the Instructor $kim");
   jina("John");
+
   printName();
   add(20, 30);
 
