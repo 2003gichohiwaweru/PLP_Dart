@@ -1,61 +1,48 @@
-
-void checkMaritalStatus (){
-  bool isMarried = true;
-  bool isSingle = false;
-
-  print("His he Married: $isMarried");
-   print("His he single:  $isSingle");
-
+// Task 1
+int addTwo(int num1, int num2) {
+  return num1 + num2;
 }
-void printName() {
-  print("My name is Joseph");
+
+// Task 2
+int subtractTwo(int num1, int num2) {
+  return num1 - num2;
 }
-void add(int num1, int num2) {
-  int sum = num1 + num2;
-  print("The sum is $sum");
+
+// Task 3
+int multiplyTwo(int num1, int num2) {
+  return num1 * num2;
 }
-void jina(String name) {
-  print("Welcome, ${name}");
+
+// Task 4
+double divideTwo(int num1, int num2) {
+  // Ensure num2 is not zero to avoid division by zero error
+  if (num2 != 0) {
+    return num1 / num2;
+  } else {
+    throw ArgumentError('Error: Cannot divide by zero.');
+  }
 }
-String InstructorName () {
-  return "Joseph Waweru";
 
+// Task 5
+int stringLength(String str) {
+  return str.length;
 }
-// function that calculates the simple interest of the program
-double calculateInterest(double Principal, double rate, double time ) =>
-Principal * rate *time / 100;
 
-int addition(int number1, int number2) {
-  int sum = number1 + number2;
-  return (sum);
+// Task 6
+dynamic getFirstElement(List lst) {
+  if (lst.isNotEmpty) {
+    return lst[0];
+  } else {
+    throw ArgumentError('Error: List is empty.');
+  }
 }
-//function with parametre and a return type
-void multiplication(int a, int b) {
-  var mul;
-  mul = a * b;
-  print("Multiplication is : $mul");
-}
-// The main application
-void main (){
-  checkMaritalStatus();
-  int number1 = 12;
-  int number2 = 40;
 
-  int total = addition(number1, number2);
-  print(" The sum is $total");
 
-  double Principal = 5000;
-  double rate = 3;
-  double time = 3;
-
-  double result = calculateInterest(Principal, rate, time);
-  print("The simple Interest is $result");
-
-  String kim = InstructorName();
-  print("The name of the Instructor $kim");
-  jina("John");
-
-  printName();
-  add(20, 30);
-
+void main() {
+  print(addTwo(3, 5));  // Output: 8
+  print(subtractTwo(8, 3));  // Output: 5
+  print(multiplyTwo(4, 6));  // Output: 24
+  print(divideTwo(10, 2));  // Output: 5.0
+  print(stringLength("Hey there"));  // Output: 5
+  print(getFirstElement(["John", 2, 3]));  // Output: 1
 }
